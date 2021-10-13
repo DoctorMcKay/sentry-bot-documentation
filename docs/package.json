@@ -1,0 +1,19 @@
+{
+	"name": "sentry-bot-documentation",
+	"version": "0.0.1",
+	"description": "Documentation for sentrybot.gg",
+	"main": "index.js",
+	"authors": {
+		"name": "Alex Corn",
+		"email": "help@sentrybot.gg"
+	},
+	"repository": "https://github.com/DoctorMcKay/sentry-bot-documentation/sentry-bot-documentation",
+	"scripts": {
+		"dev": "vuepress dev src",
+		"build": "vuepress build src"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"vuepress": "^1.5.3"
+	}
+}
