@@ -27,7 +27,7 @@ module.exports = {
 	themeConfig: {
 		repo: 'DoctorMcKay/sentry-bot-documentation',
 		editLinks: true,
-		docsDir: 'docs',
+		docsDir: '',
 		editLinkText: 'Edit this page',
 		lastUpdated: true,
 		sidebar: {
