@@ -38,6 +38,8 @@ module.exports = {
 					children: [
 						'',
 						'settings',
+						'utilities',
+						'commands'
 					]
 				}
 			],

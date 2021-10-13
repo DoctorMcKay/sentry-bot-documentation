@@ -30,3 +30,8 @@ Here are the rules for role hierarchy:
 	  and honestly, that's the way you should set things up since using the native Discord ban function has absolutely
 	  no logging attached to it at all).
 	- You can control who can use slash commands on the Commands page of the dashboard
+
+## Time Periods
+
+Some Sentry commands require a time period. Time periods are specified in format 1w2d3h4m5s (which would mean 1 week,
+2 days, 3 hours, 4 minutes, 5 seconds).

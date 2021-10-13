@@ -1,4 +1,6 @@
-# Bot Settings
+# Settings
+
+[Dashboard: Settings](https://sentrybot.gg/dashboard/settings)
 
 ## Logging
 
