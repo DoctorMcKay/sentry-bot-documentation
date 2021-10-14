@@ -4,14 +4,13 @@
 
 ## Logging
 
+<RequiredPermissions channel-description="your log channel" :channel="['View Channel', 'Send Messages', 'Embed Links', 'Attach Files']" />
+
 Sentry can log all actions it takes to a logging channel. It's recommended that you create a dedicated private channel
-specifically for Sentry to log to. Make sure that only your staff/moderators and Sentry can access it, and make sure
-that Sentry has permission to send messages and embed links.
+specifically for Sentry logging. Make sure that only your staff/moderators and Sentry can access it.
 
 You can optionally configure Sentry to @mention a specific role when a configuration error is detected, for example if
 Sentry is missing a role permission to take an action.
-
-<RequiredPermissions channel-description="your log channel" :channel="['View Channel', 'Send Messages', 'Embed Links', 'Attach Files']" />
 
 ## Message Logging
 
@@ -26,6 +25,8 @@ not be logged if they are edited or deleted, even if you enable this setting lat
 
 ## Sticky Roles
 
+<RequiredPermissions :role="['Manage Roles']" />
+
 Sentry can automatically reassign roles to users when they leave and rejoin your server. If you are using roles to
 restrict server features (e.g. [mutes](./commands.md#mute)), then it would be a very good idea to enable sticky roles.
 
@@ -34,7 +35,7 @@ it is in your server, so you can enable this feature at any time and all previou
 
 These are the possible options for this setting:
 
-- **Disabled**
+- **Disabled** (default)
 	- Sentry will not apply any roles when members join
 - **Only roles on the whitelist**
 	- Sentry will only reapply roles that you specify in a whitelist
@@ -46,9 +47,9 @@ These are the possible options for this setting:
 **Please note:** Sentry will not reapply any roles that are higher in the [role hierarchy](./index.md#permissions-and-hierarchy)
 than its own Sentry Bot role.
 
-<RequiredPermissions :role="['Manage Roles']" />
-
 ## Sticky Nicks
+
+<RequiredPermissions :role="['Manage Nicknames']" />
 
 Sentry can automatically reassign nicknames to users when they leave and rejoin your server. Nicknames will be reassigned
 regardless of whether they were set by the user themselves, or by a server moderator.
@@ -56,12 +57,11 @@ regardless of whether they were set by the user themselves, or by a server moder
 Regardless of whether this option is enabled or not, Sentry will always track nicknames for your server members as long as
 it is in your server, so you can enable this feature at any time and all previous server members will be affected.
 
-<RequiredPermissions :role="['Manage Nicknames']" />
+This setting is off by default.
 
 ## Member Notifications
 
 <PremiumFeature />
-
 <BoostFeatureRequired feature="private threads" level="2" />
 
 Sentry occasionally needs to directly notify your server members of various events. For example, Sentry notifies members
@@ -84,12 +84,12 @@ If you enable this feature and your server loses Sentry Bot premium, Sentry will
 
 ### Thread Channel
 
+<RequiredPermissions :channel="['View Channel', 'Create Private Threads', 'Send Messages in Threads', 'Embed Links']" />
+<RequiredPermissions :channel="['View Channel']" role-is-everyone suffix="Sentry is unable to add members to private threads if they cannot view the parent channel." />
+
 Choose a channel, and Sentry will create private notification threads underneath it. While it's not required, it's
 recommended that you disable **Send Messages in Threads** permission for @everyone (with an overwrite to enable it for
 Sentry Bot) in this channel, so users don't get confused and think they are messaging a moderator.
-
-<RequiredPermissions :channel="['View Channel', 'Create Private Threads', 'Send Messages in Threads', 'Embed Links']" />
-<RequiredPermissions :channel="['View Channel']" role-is-everyone suffix="Sentry is unable to add members to private threads if they cannot view the parent channel." />
 
 ### Thread Name
 

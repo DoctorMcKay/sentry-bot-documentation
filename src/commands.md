@@ -38,15 +38,17 @@ Same as [/info](#info). Always replies privately.
 
 ## Ban
 
+<RequiredPermissions :role="['Ban Members']" />
+
 **This is a moderation command.**
 
 **This is a slash command. It is executed by typing /ban in the chat box.**
 
 Bans a user from the server. This command will reply publicly in the channel where it was executed.
 
-<RequiredPermissions :role="['Ban Members']" />
-
 ## Mute
+
+<RequiredPermissions :role="['Manage Roles']" />
 
 **This is a moderation command.**
 
@@ -60,8 +62,6 @@ This command has subcommands:
 	- Unmutes user who is muted
 - **/mute list**
     - Lists all currently active mutes and their remaining time (replies privately)
-
-<RequiredPermissions :role="['Manage Roles']" />
 
 ### Muted Role
 
@@ -97,20 +97,20 @@ below it that your server moderators can use:
 	- On mobile, it can be difficult to copy the reportee's user ID. This action replies privately with the reportee's
 	  user ID for easy copying.
 - **More actions...**
-	- **Open thread**
+	- [**Open thread**](#mod-thread-channel)
 		- Opens a private thread between the reporter and the moderator who executes this action, enabling moderators to
 		  request additional information from the reporter.
 	- **Ban**
-		- Bans the reportee and marks the report as resolved. Only users who can access Sentry's **/ban** command can use this action.
-		  This action will prompt the user for a ban reason before actually banning the reportee.
+        - Bans the reportee and marks the report as resolved. Only users who can access Sentry's [/ban](#ban) command
+          can use this action. This action will prompt the user for a ban reason before actually banning the reportee.
 
 ### Report Notification Channel
+
+<RequiredPermissions :channel="['View Channel', 'Send Messages', 'Embed Links']" />
 
 This option must be set. This is the channel where report notifications will be delivered. It is **very important** that
 only your server moderators can access this channel. Anyone who has permission to view the channel will be able to act
 on reports!
-
-<RequiredPermissions :channel="['View Channel', 'Send Messages', 'Embed Links']" />
 
 ### Mention Role When Report Is Received
 
@@ -120,6 +120,8 @@ limitation.
 
 ### Notify Channel When A Reportee Is Banned
 
+<RequiredPermissions :channel="['View Channel', 'Send Messages']" />
+
 You can optionally choose a channel that will be notified when a reported user is banned using the Ban report action.
 This option is intended to be set to a public channel, in case you want transparency in your moderation actions. Bans are
 always logged to your [server log channel](./settings.md#logging).
@@ -127,19 +129,18 @@ always logged to your [server log channel](./settings.md#logging).
 Ban notification messages will include the name of the user who was banned, the name of the moderator who issued the ban,
 and the reason the moderator chose for the ban.
 
-<RequiredPermissions :channel="['View Channel', 'Send Messages']" />
-
 ### Mod Thread Channel
 
 <PremiumFeature />
 <BoostFeatureRequired feature="private threads" level="2" />
-
-If configured, enables the **Open thread** action in the More Actions menu. Threads will be opened under this channel.
-
 <RequiredPermissions :channel="['View Channel', 'Create Private Threads', 'Send Messages in Threads', 'Embed Links']" />
 <RequiredPermissions :channel="['Send Messages in Threads']" role-is-everyone suffix="Sentry is unable to add members to private threads if they cannot view the parent channel." />
 
+If configured, enables the **Open thread** action in the More Actions menu. Threads will be opened under this channel.
+
 ## Role
+
+<RequiredPermissions :role="['Manage Roles']" />
 
 **This is a moderation command.**
 
@@ -151,8 +152,6 @@ This command has subcommands:
 	- Adds a role to a specified member
 - **/role remove**
     - Removes a role from a specified member
-
-<RequiredPermissions :role="['Manage Roles']" />
 
 ### Valid Roles
 
