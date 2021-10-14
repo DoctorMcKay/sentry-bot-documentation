@@ -25,6 +25,7 @@ module.exports = {
 	 * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
 	 */
 	themeConfig: {
+		logo: '/img/logo.png',
 		repo: 'DoctorMcKay/sentry-bot-documentation',
 		editLinks: true,
 		docsDir: 'src',
@@ -43,6 +44,7 @@ module.exports = {
 		sidebar: {
 			'/': [
 				{
+					title: 'Documentation',
 					collapsable: false,
 					children: [
 						'',
