@@ -11,4 +11,4 @@ create threads, speak, or request to speak in any channel.
 Sentry is unable to modify permission overwrites on any channel it cannot view or is denied **Manage Permissions**
 permission in.
 
-Please make sure that **Manage Roles** is enabled on the Sentry Bot role.
+<RequiredPermissions :role="['Manage Roles']" />

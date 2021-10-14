@@ -11,12 +11,7 @@ that Sentry has permission to send messages and embed links.
 You can optionally configure Sentry to @mention a specific role when a configuration error is detected, for example if
 Sentry is missing a role permission to take an action.
 
-Please make sure that these permissions are enabled on the Sentry Bot role in your log channel:
-
-- View Channel
-- Send Messages
-- Embed Links
-- Attach Files
+<RequiredPermissions channel-description="your log channel" :channel="['View Channel', 'Send Messages', 'Embed Links', 'Attach Files']" />
 
 ## Message Logging
 
@@ -51,7 +46,7 @@ These are the possible options for this setting:
 **Please note:** Sentry will not reapply any roles that are higher in the [role hierarchy](./index.md#permissions-and-hierarchy)
 than its own Sentry Bot role.
 
-Please make sure that **Manage Roles** is enabled on the Sentry Bot role.
+<RequiredPermissions :role="['Manage Roles']" />
 
 ## Sticky Nicks
 
@@ -61,11 +56,13 @@ regardless of whether they were set by the user themselves, or by a server moder
 Regardless of whether this option is enabled or not, Sentry will always track nicknames for your server members as long as
 it is in your server, so you can enable this feature at any time and all previous server members will be affected.
 
-Please make sure that **Manage Nicknames** is enabled on the Sentry Bot role.
+<RequiredPermissions :role="['Manage Nicknames']" />
 
 ## Member Notifications
 
-**This is a Sentry Bot premium feature.**
+<PremiumFeature />
+
+<BoostFeatureRequired feature="private threads" level="2" />
 
 Sentry occasionally needs to directly notify your server members of various events. For example, Sentry notifies members
 when their reports are marked resolved or when they are muted or unmuted.
@@ -74,13 +71,16 @@ By default, these notifications are sent via DM. Sentry cannot DM members if the
 server members in their privacy settings.
 
 You can change Sentry's notification mode to Private Threads to enable Sentry to send member notifications via private
-threads. Sentry will create a new private thread for each unique member that it notifies in your server. Naturally,
-since this feature requires access to private threads, your server will need to be boosted to level 2.
+threads. Sentry will create a new private thread for each unique member that it notifies in your server.
 
+:::tip
 If you enable this feature and your server loses access to private threads, Sentry will continue to use already-existing
 threads to notify members. Any members who don't already have a notification thread created will receive a DM instead.
+:::
 
+:::tip
 If you enable this feature and your server loses Sentry Bot premium, Sentry will send all notifications via DM.
+:::
 
 ### Thread Channel
 
@@ -88,9 +88,8 @@ Choose a channel, and Sentry will create private notification threads underneath
 recommended that you disable **Send Messages in Threads** permission for @everyone (with an overwrite to enable it for
 Sentry Bot) in this channel, so users don't get confused and think they are messaging a moderator.
 
-Please make sure that **Create Private Threads** is enabled on the Sentry Bot role in this channel, and that **View Channel**
-is enabled on @everyone in this channel. Sentry is unable to add members to private threads if they cannot view the
-parent channel.
+<RequiredPermissions :channel="['View Channel', 'Create Private Threads', 'Send Messages in Threads', 'Embed Links']" />
+<RequiredPermissions :channel="['View Channel']" role-is-everyone suffix="Sentry is unable to add members to private threads if they cannot view the parent channel." />
 
 ### Thread Name
 

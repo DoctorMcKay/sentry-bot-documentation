@@ -44,6 +44,8 @@ Same as [/info](#info). Always replies privately.
 
 Bans a user from the server. This command will reply publicly in the channel where it was executed.
 
+<RequiredPermissions :role="['Ban Members']" />
+
 ## Mute
 
 **This is a moderation command.**
@@ -57,7 +59,9 @@ This command has subcommands:
 - **/mute remove**
 	- Unmutes user who is muted
 - **/mute list**
-	- Lists all currently active mutes and their remaining time (replies privately)
+    - Lists all currently active mutes and their remaining time (replies privately)
+
+<RequiredPermissions :role="['Manage Roles']" />
 
 ### Muted Role
 
@@ -106,6 +110,8 @@ This option must be set. This is the channel where report notifications will be 
 only your server moderators can access this channel. Anyone who has permission to view the channel will be able to act
 on reports!
 
+<RequiredPermissions :channel="['View Channel', 'Send Messages', 'Embed Links']" />
+
 ### Mention Role When Report Is Received
 
 On large servers, setting channel notification preferences to "All Messages" does not send push notifications to mobile
@@ -121,16 +127,17 @@ always logged to your [server log channel](./settings.md#logging).
 Ban notification messages will include the name of the user who was banned, the name of the moderator who issued the ban,
 and the reason the moderator chose for the ban.
 
+<RequiredPermissions :channel="['View Channel', 'Send Messages']" />
+
 ### Mod Thread Channel
 
-**This is a Sentry Bot premium feature.**
+<PremiumFeature />
+<BoostFeatureRequired feature="private threads" level="2" />
 
-Requires Sentry Bot premium and access to private threads (server boost level 2). If configured, enables the **Open thread**
-action in the More Actions menu. Threads will be opened under this channel.
+If configured, enables the **Open thread** action in the More Actions menu. Threads will be opened under this channel.
 
-Please make sure that **Create Private Threads** is enabled on the Sentry Bot role in this channel, and that **View Channel**
-and **Send Messages in Threads** are enabled on @everyone in this channel. Sentry is unable to add members to private
-threads if they cannot view the parent channel.
+<RequiredPermissions :channel="['View Channel', 'Create Private Threads', 'Send Messages in Threads', 'Embed Links']" />
+<RequiredPermissions :channel="['Send Messages in Threads']" role-is-everyone suffix="Sentry is unable to add members to private threads if they cannot view the parent channel." />
 
 ## Role
 
@@ -143,7 +150,9 @@ This command has subcommands:
 - **/role add**
 	- Adds a role to a specified member
 - **/role remove**
-	- Removes a role from a specified member
+    - Removes a role from a specified member
+
+<RequiredPermissions :role="['Manage Roles']" />
 
 ### Valid Roles
 
