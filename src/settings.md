@@ -32,7 +32,7 @@ not be logged if they are edited or deleted, even if you enable this setting lat
 ## Sticky Roles
 
 Sentry can automatically reassign roles to users when they leave and rejoin your server. If you are using roles to
-restrict server features (e.g. [mutes](/commands.html#mute)), then it would be a very good idea to enable sticky roles.
+restrict server features (e.g. [mutes](./commands.md#mute)), then it would be a very good idea to enable sticky roles.
 
 Regardless of whether this option is enabled or not, Sentry will always track roles for your server members as long as
 it is in your server, so you can enable this feature at any time and all previous server members will be affected.
@@ -48,7 +48,7 @@ These are the possible options for this setting:
 - **All roles**
 	- Sentry will reapply all roles
 
-**Please note:** Sentry will not reapply any roles that are higher in the [role hierarchy](/#permissions-and-hierarchy)
+**Please note:** Sentry will not reapply any roles that are higher in the [role hierarchy](./index.md#permissions-and-hierarchy)
 than its own Sentry Bot role.
 
 Please make sure that **Manage Roles** is enabled on the Sentry Bot role.

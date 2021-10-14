@@ -53,7 +53,7 @@ Bans a user from the server. This command will reply publicly in the channel whe
 This command has subcommands:
 
 - **/mute add**
-	- Mutes a user for a [period of time](/#time-periods)
+	- Mutes a user for a [period of time](./index.md#time-periods)
 - **/mute remove**
 	- Unmutes user who is muted
 - **/mute list**
@@ -72,7 +72,7 @@ these permissions on all channels:
 - Speak (voice)
 - Video (voice)
 
-You can use the [Mute Role Permissions Setup](/utilities.html#mute-role-permissions-setup) utility to auto-configure your
+You can use the [Mute Role Permissions Setup](./utilities.md#mute-role-permissions-setup) utility to auto-configure your
 muted role on all channels.
 
 ## Report
@@ -85,7 +85,7 @@ Allows server members to report other members to server staff for breaking the r
 below it that your server moderators can use:
 
 - **Mark Resolved**
-	- Marks the report as resolved and sends a [notification](/settings.html#member-notifications) to the reporter that
+	- Marks the report as resolved and sends a [notification](./settings.md#member-notifications) to the reporter that
 	  the report was marked as resolved.
 - **Resolve Silently**
 	- Marks the report as resolved without sending a notification to the reporter.
@@ -116,7 +116,7 @@ limitation.
 
 You can optionally choose a channel that will be notified when a reported user is banned using the Ban report action.
 This option is intended to be set to a public channel, in case you want transparency in your moderation actions. Bans are
-always logged to your [server log channel](/settings.html#logging).
+always logged to your [server log channel](./settings.md#logging).
 
 Ban notification messages will include the name of the user who was banned, the name of the moderator who issued the ban,
 and the reason the moderator chose for the ban.
