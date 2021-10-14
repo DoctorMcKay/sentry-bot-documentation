@@ -30,6 +30,12 @@ module.exports = {
 		docsDir: 'src',
 		editLinkText: 'Edit this page',
 		lastUpdated: true,
+		nav: [
+			{
+				text: 'Dashboard',
+				link: 'https://sentrybot.gg'
+			}
+		],
 		sidebar: {
 			'/': [
 				{
