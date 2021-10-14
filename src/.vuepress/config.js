@@ -31,6 +31,7 @@ module.exports = {
 		docsDir: 'src',
 		editLinkText: 'Edit this page',
 		lastUpdated: true,
+		smoothScroll: true,
 		nav: [
 			{
 				text: 'Privacy Policy',
@@ -61,7 +62,7 @@ module.exports = {
 	 * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
 	 */
 	plugins: [
-		'@vuepress/plugin-back-to-top',
-		'@vuepress/plugin-medium-zoom'
+		//'@vuepress/plugin-back-to-top',
+		//'@vuepress/plugin-medium-zoom'
 	]
 }
