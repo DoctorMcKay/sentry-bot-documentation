@@ -32,6 +32,10 @@ module.exports = {
 		lastUpdated: true,
 		nav: [
 			{
+				text: 'Privacy Policy',
+				link: '/privacy.md'
+			},
+			{
 				text: 'Dashboard',
 				link: 'https://sentrybot.gg'
 			}
@@ -47,7 +51,7 @@ module.exports = {
 						'commands'
 					]
 				}
-			],
+			]
 		}
 	},
 
