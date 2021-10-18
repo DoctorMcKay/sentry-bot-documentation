@@ -44,7 +44,50 @@ Same as [/info](#info). Always replies privately.
 
 **This is a slash command. It is executed by typing /ban in the chat box.**
 
-Bans a user from the server. This command will reply publicly in the channel where it was executed.
+This command has subcommands:
+
+- **/ban add**
+    - Bans a user from the server
+- **/ban remove**
+    - Unbans a user from the server
+
+This command will reply publicly in the channel where it was executed.
+
+### Ban Mode
+
+#### Discord Native Bans
+
+**Default.** Sentry will ban members using the normal Discord ban system. Discord bans are by user account and by IP.
+
+#### Bot Kick-Based Bans
+
+<RequiredPermissions :role="['Kick Members', 'Ban Members']" />
+
+Sentry will enforce bans by kicking banned members whenever they join the server. These bans are not by IP. This feature
+is intended for use in servers where members are likely to share IPs regularly (e.g. a school-based server).
+
+If Sentry is experiencing an outage when a banned member joins, then they will be allowed to join the server. Sentry
+will kick them the first time they send a message, interact with Sentry, or change their profile (name or avatar) once
+Sentry becomes available again.
+
+:::warning
+Sentry will not upgrade bans issued by Discord's native ban option to kick-based bans. If you want all issued bans to
+be kick-based, then you should remove the **Ban Members** permission from your moderator roles.
+:::
+
+:::warning
+Sentry must still have **Ban Members** permission, even if you choose to use kick-based bans. When a kick-based ban is
+issued, Sentry will issue a traditional ban to remove the member from the server, which will then be immediately removed.
+This behavior is required to enable message purging.
+:::
+
+### Send DM to Banned Members
+
+If enabled, Sentry will send a DM to members that are banned using Sentry just before the ban is issued. You can choose
+whether Sentry will inform the user of the reason why they were banned.
+
+If using kick-based bans and this option is enabled, then Sentry will send a DM every time a kick-based banned member
+joins.
 
 ## Mute
 
