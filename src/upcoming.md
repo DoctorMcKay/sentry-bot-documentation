@@ -1,6 +1,7 @@
 # Planned Features
 
 This list is not comprehensive, and unfortunately we cannot guarantee a timeline for any of these upcoming features.
+These features are not listed in any particular order.
 
 ## Dashboard Automod Configuration
 
@@ -58,3 +59,7 @@ also be configured to expire issued points after a specific period of time.
 ## Multiple Log Channels
 
 Allows you to choose a different channel for each different type of log message.
+
+## Ban Appeals
+
+Allow banned users to appeal their bans through Sentry. Requires enabling sending DMs to banned members.
