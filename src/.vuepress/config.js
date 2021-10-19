@@ -41,6 +41,10 @@ module.exports = {
 			{
 				text: 'Dashboard',
 				link: 'https://sentrybot.gg'
+			},
+			{
+				text: 'Support',
+				link: 'https://discord.gg/zgmZZga56G'
 			}
 		],
 		sidebar: {
