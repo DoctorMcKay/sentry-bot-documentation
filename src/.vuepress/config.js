@@ -53,7 +53,8 @@ module.exports = {
 						'settings',
 						'utilities',
 						'commands',
-						'messagebuilder'
+						'messagebuilder',
+						'upcoming'
 					]
 				}
 			]
