@@ -60,6 +60,14 @@ module.exports = {
 						'messagebuilder',
 						'upcoming'
 					]
+				},
+				{
+					title: 'Automod',
+					collapsable: false,
+					children: [
+						'automod/',
+						'automod/conditions'
+					]
 				}
 			]
 		}
