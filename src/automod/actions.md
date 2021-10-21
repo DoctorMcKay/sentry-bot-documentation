@@ -72,13 +72,32 @@ Check this box if you want Sentry to automatically delete the message that it se
 seconds after it's sent. This is useful for giving the entire channel context as to why a message was deleted (for example)
 without permanently cluttering the channel.
 
+### Message Placeholder Tokens
+
+You can use these tokens in your message's content or embeds. They will automatically be replaced with the appropriate
+value.
+
+| Token | Replacement | Info |
+| ----- | ----------- | ---- |
+| %GUILD_ID% | The ID of your server | |
+| %CHANNEL_ID% | The ID of the channel where the trigger message was sent | |
+| %MESSAGE_ID% | The ID of the message that triggered this rule | |
+| %MESSAGE_LINK% | The URL of the message that triggered this rule | Same as **Copy Message Link** in the Discord client |
+| %USER_ID% | The ID of the user that sent the message that triggered this rule | If you want to tag them, use `<@%USER_ID%>`. If you also want to mention them, enable Users in Allow mentioning box. |
+| %USER_NAME% | The username of the user that sent the message that triggered this rule | |
+| %USER_NAME_ESCAPED% | The escaped username of the user | For example, **\*Bob\*** becomes **\\\*Bob\\\***. It would display as **\*Bob\*** in a message. |
+| %USER_NICKNAME% | The server-specific nickname of the user, or their username if no nickname is set | |
+| %USER_NICKNAME_ESCAPED% | The escaped nickname of the user | |
+| %USER_TAG% | The user's Discord tag as plain text | For example, **Bob#1234** |
+| %USER_TAG_ESCAPED% | The escaped Discord tag | |
+
 ## Start Thread
 
 Starts a new thread and adds the member who authored the message that triggered this rule.
 
 ### Thread Name
 
-Choose a name for the thread.
+Choose a name for the thread. You can use [placeholder tokens](#message-placeholder-tokens) in the thread name.
 
 ### Parent Channel
 
