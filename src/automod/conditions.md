@@ -1,10 +1,10 @@
 # Conditions
 
-Each condition can be inverted by enabling the "Match only if condition is not true" checkbox. If this option is checked,
+Each condition can be inverted by enabling the "Pass only if condition is not true" checkbox. If this option is checked,
 then after the condition is evaluated, its result will be flipped; a pass becomes a fail and a fail becomes a pass.
 
 For example, if you configure an [In Channel](#in-channel) condition with a private staff channel and enable the
-"match only if condition is not true" option, then the rule will only pass for messages sent in channels besides your
+"pass only if condition is not true" option, then the rule will only pass for messages sent in channels besides your
 private staff channel, effectively disabling the rule for that channel.
 
 ## Contains Attachment

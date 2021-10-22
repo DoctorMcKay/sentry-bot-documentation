@@ -5,12 +5,13 @@ These features are not listed in any particular order.
 
 ## Dashboard Automod Configuration
 
-Sentry already has a complex rules-based automod feature, but it's not yet possible to configure it from the dashboard.
-This feature is upcoming.
+[**Automod is now configurable from the dashboard!**](https://sentrybot.gg/dashboard/automod)
 
-Example screenshot:
+Sentry already has the ability to add interaction components (i.e. buttons and select menus) to its own messages which,
+when selected, will evaluate automod rules. It's not yet possible to configure this feature from the dashboard, but this
+is planned for the near future.
 
-![Automod configuration screenshot](https://cdn.discordapp.com/attachments/734910740468858881/884704849286017084/unknown.png)
+This feature can be used to create role selectors and many other possibilities.
 
 ## Member Vetting
 
