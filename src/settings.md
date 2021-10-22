@@ -44,8 +44,10 @@ These are the possible options for this setting:
 - **All roles**
 	- Sentry will reapply all roles
 
-**Please note:** Sentry will not reapply any roles that are higher in the [role hierarchy](./index.md#permissions-and-hierarchy)
+:::tip
+Sentry will not reapply any roles that are higher in the [role hierarchy](./index.md#permissions-and-hierarchy)
 than its own Sentry Bot role.
+:::
 
 ## Sticky Nicks
 
