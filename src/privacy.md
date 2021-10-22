@@ -14,7 +14,7 @@ necessary to allow Sentry to act in the way you requested it to.
 
 ## Message Content
 
-By default, Sentry can read all messages sent by all users in all public channels in your server. This is necessary in
+By default, Sentry can read all messages sent by all members in all public channels in your server. This is necessary in
 order to make Sentry's automod feature work.
 
 If you enable [logging of message edits and deletions](./settings.md#message-logging), Sentry will collect and store the

@@ -25,10 +25,8 @@ Here are the rules for role hierarchy:
 - Role hierarchy rules are not applied to non-moderation commands, for example /info
 - Naturally, the bot cannot perform an action it does not have role permission to take
 	- For example, the /ban command won't work if none of the bot's assigned roles have the Ban Members permission
-	- Permissions are not required on the user executing the slash command
-	- For example, a user with access to the /ban command can use it even if none of their own roles have Ban Members (
-	  and honestly, that's the way you should set things up since using the native Discord ban function has absolutely
-	  no logging attached to it at all).
+	- Permissions are not required on the member executing the slash command
+	- For example, a member with access to the /ban command can use it even if none of their own roles have Ban Members
 	- You can control who can use slash commands on the Commands page of the dashboard
 
 ## Time Periods

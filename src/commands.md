@@ -84,7 +84,7 @@ This behavior is required to enable message purging.
 ### Send DM to Banned Members
 
 If enabled, Sentry will send a DM to members that are banned using Sentry just before the ban is issued. You can choose
-whether Sentry will inform the user of the reason why they were banned.
+whether Sentry will inform the member of the reason why they were banned.
 
 If using kick-based bans and this option is enabled, then Sentry will send a DM every time a kick-based banned member
 joins.
@@ -102,7 +102,7 @@ This command has subcommands:
 - **/mute add**
 	- Mutes a user for a [period of time](./index.md#time-periods)
 - **/mute remove**
-	- Unmutes user who is muted
+	- Unmutes a user who is muted
 - **/mute list**
     - Lists all currently active mutes and their remaining time (replies privately)
 
@@ -144,8 +144,8 @@ below it that your server moderators can use:
 		- Opens a private thread between the reporter and the moderator who executes this action, enabling moderators to
 		  request additional information from the reporter.
 	- **Ban**
-        - Bans the reportee and marks the report as resolved. Only users who can access Sentry's [/ban](#ban) command
-          can use this action. This action will prompt the user for a ban reason before actually banning the reportee.
+        - Bans the reportee and marks the report as resolved. Only members who can access Sentry's [/ban](#ban) command
+          can use this action. This action will prompt the member for a ban reason before actually banning the reportee.
 
 ### Report Notification Channel
 

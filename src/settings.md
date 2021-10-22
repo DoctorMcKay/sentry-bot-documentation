@@ -14,7 +14,7 @@ Sentry is missing a role permission to take an action.
 
 ## Message Logging
 
-Sentry can log when users edit or delete their messages to your server logging channel. If you set this to anything
+Sentry can log when members edit or delete their messages to your server logging channel. If you set this to anything
 except "Don't log edits or deletions", then Sentry will store the contents of all messages sent in all channels it can
 access.
 
@@ -91,7 +91,7 @@ If you enable this feature and your server loses Sentry Bot premium, Sentry will
 
 Choose a channel, and Sentry will create private notification threads underneath it. While it's not required, it's
 recommended that you disable **Send Messages in Threads** permission for @everyone (with an overwrite to enable it for
-Sentry Bot) in this channel, so users don't get confused and think they are messaging a moderator.
+Sentry Bot) in this channel, so members don't get confused and think they are messaging a moderator.
 
 ### Thread Name
 

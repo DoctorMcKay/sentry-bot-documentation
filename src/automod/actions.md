@@ -127,7 +127,7 @@ this action will do nothing and will log its failure to your server's [log chann
 
 ### Non-Moderators Can Add Other Non-Moderators To This Thread
 
-Uncheck this box if you don't want to allow users without the **Manage Threads** permission to add other users who lack
+Uncheck this box if you don't want to allow members without the **Manage Threads** permission to add other members who lack
 **Manage Threads** permission to this thread by @mentioning them. This option is unavailable for public threads (as
 everyone who can see the thread's parent channel can always view the thread).
 
@@ -151,9 +151,9 @@ Choose the role that you want Sentry to toggle, add, or remove.
 
 ### Behavior
 
-- Toggle: If the user doesn't already have the role, then it will be added. If the user does already have the role, then it will be removed.
-- Add role: If the user doesn't already have the role, then it will be added. If the user does already have the role, then this action does nothing.
-- Remove role: If the user already has the role, then it will be removed. If the user doesn't already have the role, then this action does nothing.
+- Toggle: If the member doesn't already have the role, then it will be added. If the member does already have the role, then it will be removed.
+- Add role: If the member doesn't already have the role, then it will be added. If the member does already have the role, then this action does nothing.
+- Remove role: If the member already has the role, then it will be removed. If the member doesn't already have the role, then this action does nothing.
 
 ### Respect Role Hierarchy
 

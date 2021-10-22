@@ -76,6 +76,6 @@ This condition passes if the message it's testing was sent in one of the configu
 
 ## User Has Role
 
-This condition passes if the message it's testing was sent by a user who has one of the configured roles.
+This condition passes if the message it's testing was sent by a member who has one of the configured roles.
 
 This condition is useful for making moderators immune to automod rules by enabling the match only if condition is not true option.
