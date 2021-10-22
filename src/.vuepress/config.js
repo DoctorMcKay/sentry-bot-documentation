@@ -67,7 +67,8 @@ module.exports = {
 					children: [
 						'automod/',
 						'automod/conditions',
-						'automod/actions'
+						'automod/actions',
+						'automod/examples'
 					]
 				}
 			]
