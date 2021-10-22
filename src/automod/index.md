@@ -1,5 +1,7 @@
 # Overview
 
+[Dashboard: Automod](https://sentrybot.gg/dashboard/automod)
+
 Sentry's automod feature is very powerful. It allows you to create your own custom rules to evaluate against messages
 that are sent in your server.
 
