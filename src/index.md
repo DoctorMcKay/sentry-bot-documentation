@@ -31,5 +31,8 @@ Here are the rules for role hierarchy:
 
 ## Time Periods
 
-Some Sentry commands require a time period. Time periods are specified in format 1w2d3h4m5s (which would mean 1 week,
-2 days, 3 hours, 4 minutes, 5 seconds).
+Some Sentry commands require a time period. Time periods are specified in the format **1w2d3h4m5s** (which would mean
+1 week, 2 days, 3 hours, 4 minutes, 5 seconds).
+
+Time period options may be specified in any order, spaces are ignored, and any missing units will be assumed as 0.
+For example, **1m 2d** means the same as **0w2d0h1m0s**.
