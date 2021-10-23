@@ -27,6 +27,11 @@ Additional automod conditions and actions are planned, including:
       counter `link` is 5 or greater, then Mute Member. This has the effect of muting people if they send more than 5
       messages containing links in 10 seconds.
 
+## Configurable Ban-Via-Report Reasons
+
+Currently, if you choose to ban a member in order to resolve a report, you must choose from a predefined list of ban
+reasons. In the future, you will be able to configure these predefined ban reasons for your server.
+
 ## Member Vetting
 
 A feature to allow you to vet new server members before they can access your server. Member vetting will add a role you
