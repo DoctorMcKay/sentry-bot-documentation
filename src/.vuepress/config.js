@@ -14,9 +14,12 @@ module.exports = {
 	 * ref：https://v1.vuepress.vuejs.org/config/#head
 	 */
 	head: [
-		['meta', {name: 'theme-color', content: '#3eaf7c'}],
+		['meta', {name: 'theme-color', content: '#d6680e'}],
 		['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
 		['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}],
+		['meta', {rel: 'icon', type: 'image/png', sizes: '32x32', href: '/img/icons/favicon-32x32.png'}],
+		['meta', {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/img/icons/favicon-16x16.png'}],
+		['meta', {rel: 'apple-touch-icon', sizes: '180x180', href: '/img/icons/apple-touch-icon-180x180.png'}],
 		['script', {src: '/js/fix-scroll-to-hash.js'}]
 	],
 
@@ -26,7 +29,7 @@ module.exports = {
 	 * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
 	 */
 	themeConfig: {
-		logo: '/img/logo.png',
+		logo: '/img/logo-dark.png',
 		repo: 'DoctorMcKay/sentry-bot-documentation',
 		editLinks: true,
 		docsDir: 'src',
