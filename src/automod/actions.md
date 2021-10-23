@@ -16,7 +16,7 @@ audit log and in any [log channel](../settings.md#logging) message that might be
 
 Deletes the message that triggered the rule. This is a moderation action and will respect role hierarchy.
 
-## Mute
+## Mute Member
 
 <RequiredPermissions :role="['Manage Roles']" />
 

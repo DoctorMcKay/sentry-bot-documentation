@@ -13,6 +13,20 @@ is planned for the near future.
 
 This feature can be used to create role selectors and many other possibilities.
 
+## New Automod Features
+
+Additional automod conditions and actions are planned, including:
+
+- Kick Member
+- Ban Member
+- Toggle Role Temporarily
+- Increment Counter
+    - It will be possible to configure an action in an automod message rule to increment a per-user counter by some
+      amount. You will then be able to configure actions to be taken when counters reach a specific value.
+    - For example, if Message Contains Link, then Increment Counter `links` by 1 and expire it in 10 seconds. If
+      counter `link` is 5 or greater, then Mute Member. This has the effect of muting people if they send more than 5
+      messages containing links in 10 seconds.
+
 ## Member Vetting
 
 A feature to allow you to vet new server members before they can access your server. Member vetting will add a role you
@@ -53,9 +67,9 @@ specific users at a glance. Also enables viewing all active mutes.
 
 ## Warns
 
-Allows you to pre-configure a list of warn reasons and a number of points to be issued for each reason. You will be
-able to configure actions to be automatically taken when members reach a specific number of points. Each warn reason can
-also be configured to expire issued points after a specific period of time.
+Allows you to pre-configure a list of warn reasons and a number of points to be issued for each reason. You will be able
+to configure actions to be automatically taken when members reach a specific number of points. Each warn reason can also
+be configured to expire issued points after a specific period of time.
 
 ## Multiple Log Channels
 

@@ -74,7 +74,7 @@ the capitalization of the string you entered).
 
 This condition passes if the message it's testing was sent in one of the configured channels.
 
-## User Has Role
+## Member Has Role
 
 This condition passes if the message it's testing was sent by a member who has one of the configured roles.
 
