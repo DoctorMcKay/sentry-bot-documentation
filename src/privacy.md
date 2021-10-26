@@ -78,6 +78,7 @@ We collect and store some data about every server Sentry is a member of.
   server (but not messages)
 - The list of Discord [features](https://discord.com/developers/docs/resources/guild#guild-object-guild-features) that
   are enabled on your server
+- The ID of the user who added Sentry to the server
 
 ## Data About Server Members
 
