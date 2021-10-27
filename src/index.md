@@ -52,3 +52,6 @@ The same is true of all other slash commands that accept a user as an argument.
 
 You can also tag a user by their ID by typing `<@user_id>` in the Discord chat box. For example, if you wanted to tag
 a user in your staff channel but Discord won't auto-populate their username, you can type `<@821973078112206891>`.
+
+You can add an item to copy a user's ID the context menu when you right-click (or tap and hold) on their username by
+enabling developer mode in your Discord settings > Advanced.
