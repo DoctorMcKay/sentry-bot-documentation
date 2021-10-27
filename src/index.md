@@ -36,3 +36,19 @@ Some Sentry commands require a time period. Time periods are specified in the fo
 
 Time period options may be specified in any order, spaces are ignored, and any missing units will be assumed as 0.
 For example, **1m 2d** means the same as **0w2d0h1m0s**.
+
+## User IDs
+
+Every user on Discord has a **user ID**. This ID is a long number that never changes, even if the user changes their
+username or discriminator. Sentry includes a user's ID in the bottom of every log message that relates to that user so
+you can refer back to that user later without having to know their current Discord tag.
+
+Every slash command accepts a user ID in place of a user tag. For example, if you want to unban a user but Discord isn't
+auto-populating their username in the `/ban remove` command, you can use their user ID instead:
+
+![User ID slash command example](https://mckay.media/EpdkF)
+
+The same is true of all other slash commands that accept a user as an argument.
+
+You can also tag a user by their ID by typing `<@user_id>` in the Discord chat box. For example, if you wanted to tag
+a user in your staff channel but Discord won't auto-populate their username, you can type `<@821973078112206891>`.
