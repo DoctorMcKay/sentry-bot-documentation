@@ -1,6 +1,6 @@
 # Home
 
-[Support Server](https://discord.gg/zgmZZga56G)
+[Support Server](https://discord.gg/duncUDdfn7)
 
 Sentry is a moderation bot for Discord. This site documents its features and how to use it most effectively.
 
