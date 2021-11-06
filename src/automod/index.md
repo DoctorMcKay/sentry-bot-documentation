@@ -23,3 +23,16 @@ This option is particularly useful for rules that reply with a message based on 
 a rule with condition [Content Exactly Equals](./conditions.md#content-exactly-equals) "!help" that replies with a message
 directing members on how to use a bot, you should probably enable the "only test new messages" option. Otherwise,
 mischievous members could edit very old messages to trigger the reply seemingly out of nowhere.
+
+## Limits
+
+Each server is limited to 5 automod message rules. This limit can be increased to 100 by upgrading your server to
+[Premium](../premium.md). Once you reach your limit, no more rules can be created.
+
+If you subscribe to Premium, create more than 5 rules, and then cancel Premium, these things happen:
+
+- All enabled rules continue to be processed, even if you have more than 5
+- You won't be able to create any new rules until you delete enough rules such that you have fewer than 5 (enabled or disabled)
+- All rules can be edited without restriction
+- All rules can be disabled without restriction
+- You won't be able to enable any rules that are disabled if enabling that rule would bring your total number of enabled rules over 5

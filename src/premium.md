@@ -68,6 +68,11 @@ Premium servers can choose to have Sentry send notifications to their members us
 Premium servers have the ability to directly open [private threads](./commands.md#mod-thread-channel) with reporters in
 order to request additional context or evidence for a report.
 
+### 100 Automod message rules
+
+Free servers can create up to 5 [Automod](./automod/index.md) message rules. Premium servers have that limit increased
+to 100.
+
 ### More to come
 
 There are many new features planned for Sentry to come in the future. See the [upcoming features](./upcoming.md) page
