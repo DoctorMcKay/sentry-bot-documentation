@@ -61,6 +61,7 @@ module.exports = {
 						'utilities',
 						'commands',
 						'messagebuilder',
+						'premium',
 						'upcoming'
 					]
 				},
