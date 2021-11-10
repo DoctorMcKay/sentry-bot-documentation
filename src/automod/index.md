@@ -24,6 +24,15 @@ a rule with condition [Content Exactly Equals](./conditions.md#content-exactly-e
 directing members on how to use a bot, you should probably enable the "only test new messages" option. Otherwise,
 mischievous members could edit very old messages to trigger the reply seemingly out of nowhere.
 
+## Threads
+
+<RequiredPermissions :role="['Manage Threads']" suffix="in order for Sentry to moderate messages in private threads" suffix-before-period />
+
+Sentry is able to moderate messages in threads, even if Sentry isn't directly a member of a thread. All messages sent in
+threads which are under channels that Sentry can view will be tested against your automod rules. Sentry can execute most
+automod actions without adding itself to a thread, but if Sentry needs to send a message in a thread then Sentry will
+automatically add itself to the thread.
+
 ## Limits
 
 Each server is limited to 5 automod message rules. This limit can be increased to 100 by upgrading your server to

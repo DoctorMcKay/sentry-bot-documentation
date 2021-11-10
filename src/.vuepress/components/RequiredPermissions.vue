@@ -21,6 +21,9 @@ export default {
 		},
 		suffix: {
 			type: String
+		},
+		suffixBeforePeriod: {
+			type: Boolean
 		}
 	},
 	computed: {
@@ -39,7 +42,10 @@ export default {
 				output += `${this.buildList(this.channel)} must be allowed to ${this.roleIsEveryone ? '@everyone' : 'the Sentry Bot role'} in ${this.channelDescription || 'this channel'}`;
 			}
 
-			return output + '.' + (this.suffix ? ` ${this.suffix}` : '');
+			return output
+				+ (!this.suffix || !this.suffixBeforePeriod ? '.' : '')
+				+ (this.suffix ? ` ${this.suffix}` : '')
+				+ (this.suffix && this.suffixBeforePeriod ? '.' : '');
 		}
 	},
 	methods: {
