@@ -200,3 +200,37 @@ This command has subcommands:
 
 You can optionally choose a list of roles which will be the only roles that can be granted or removed using this command.
 Useful if you want to give some moderators the ability to grant a limited subset of roles.
+
+## Purge
+
+<RequiredPermissions :role="['Manage Messages']" />
+
+**This is a moderation command.**
+
+**This is a slash command. It is executed by typing /purge in the chat box.**
+
+Deletes some number of messages from the current channel at once. This command cannot delete any messages older than 2
+weeks, or older than the previous 500 messages in the channel.
+
+The only required argument is `limit`. This should be a number from 1-200, and is the maximum number of messages that
+Sentry will purge. If Sentry can't find enough messages to delete, then Sentry will delete as many as it can find.
+
+All other arguments are optional and will restrict which messages Sentry will delete. If you don't provide any additional
+arguments besides `limit`, then Sentry will delete all messages in the channel, newest first, up to your limit.
+
+- contains-substring: Only messages containing the provided substring will be deleted. String matching is case-insensitive, 
+  but punctuation is not ignored as in the Contains Substring automod condition.
+- user-type: Only messages sent by the specified user type (humans or bots) will be deleted.
+- from-user: Only messages sent by the speciifed user will be deleted.
+- with-mentions: Only messages that contain at least one user, role, or @everyone mention will be deleted. You can also
+  choose "without mentions", which will only delete messages that do not contain a mention.
+- with-files: Only messages that contain at least one uploaded file will be deleted. You can also choose "without files",
+  which will only delete messages that do not contain an uploaded file.
+- with-links: Only messages that contain at least one link will be deleted. You can also choose "without links", which
+  will only delete messages that have message content but do not contain links.
+- with-embeds: Only messages that contain embedded content (e.g. a Tweet or a linked image) will be deleted. You can also
+  choose "without embeds", which will only delete messages that do not contain embedded content. Uploaded files do not
+  qualify as embedded content.
+
+It is possible to create a series of arguments that are contradictory. For example, `from-user: @Sentry, user-type: humans`
+will not match any messages because Sentry is a bot, not a human.
