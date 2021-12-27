@@ -66,6 +66,9 @@ Check this box if you want Sentry to add the content of the message that trigger
 message that it sends with this action. This embed will include some extra information about the user that authored the
 message, such as their account creation date and time and when they joined the server.
 
+The embed will also include a button which, when pressed, will privately reply to you with the user's ID. The author's
+user ID is already available in the footer of the embed, but the button makes it easier to copy the ID on mobile.
+
 ### Delete This Reply Shortly After It's Sent
 
 Check this box if you want Sentry to automatically delete the message that it sends via this action approximately 10
