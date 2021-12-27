@@ -59,6 +59,7 @@ module.exports = {
 						'',
 						'settings',
 						'utilities',
+						'membersearch',
 						'commands',
 						'messagebuilder',
 						'premium',
