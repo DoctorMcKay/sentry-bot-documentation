@@ -122,6 +122,21 @@ these permissions on all channels:
 You can use the [Mute Role Permissions Setup](./utilities.md#mute-role-permissions-setup) utility to auto-configure your
 muted role on all channels.
 
+#### Discord Timeouts
+
+Optionally, you can choose to have mutes enforced using Discord's [timeout feature](https://dis.gd/timeout). To enable
+this option, choose **( Use Discord timeouts )** for your muted role.
+
+Please note that Discord timeouts are more limited compared to a role-based mute:
+
+- Discord timeouts can only be 28 days long
+- It's not possible to allow users to access specific channels when in a timeout
+- It's not possible to list users that are currently in a timeout
+
+Please note that if you were previously using a muted role and switch to Discord timeouts, existing mutes will still expire
+normally, but it will become impossible to remove them using Sentry's `/mute remove` command. You can still manually remove
+the role.
+
 ## Report
 
 **This is a public command.**

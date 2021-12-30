@@ -12,3 +12,5 @@ create threads, speak, or request to speak in any channel.
 
 Sentry is unable to modify permission overwrites on any channel which it cannot view or in which it is denied
 **Manage Permissions**.
+
+This tool is not available if you are using [Discord Timeouts](./commands.md#discord-timeouts) for mutes.
