@@ -2,6 +2,24 @@
 
 [Dashboard: Utilities](https://sentrybot.gg/dashboard/utilities)
 
+## Post Message
+
+<RequiredPermissions :channel="['View Channel', 'Send Messages', 'Embed Links']" />
+
+Enables you to post any message you like to any channel in your server. This might be useful for posting your server
+rules, since that message will be editable by any moderator using the Sentry dashboard.
+
+See [Message Builder](./messagebuilder.md) for details.
+
+## Edit Message
+
+Enables you to edit any message Sentry has sent in your server.
+
+Paste the link to the message you want to edit into the **Message link** box, then click **Load Message** to open the
+[Message Builder](./messagebuilder.md).
+
+To obtain a message link, right-click on the message and choose **Copy Message Link**.
+
 ## Mute Role Permissions Setup
 
 <RequiredPermissions :role="['Manage Roles']" />
