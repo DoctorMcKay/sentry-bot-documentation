@@ -56,6 +56,12 @@ This action is otherwise identical to [Send Message](#send-message).
 Check this box if you want Sentry to tag the message that triggered this rule in its reply. This is equivalent to using
 the "Reply" function in the Discord client. If not checked, then this is sent as a normal, distinct message.
 
+### Send Channel Message Privately to Triggering Member
+
+Check this box if you want Sentry to reply to the interacting member using an
+[ephemeral message](https://support.discord.com/hc/en-us/articles/1500000580222-Ephemeral-Messages-FAQ).
+This option is only available for automod component rules.
+
 ## Send Message
 
 Publicly sends a customizable message in any channel of your choice.
@@ -157,6 +163,14 @@ Choose the role that you want Sentry to toggle, add, or remove.
 - Toggle: If the member doesn't already have the role, then it will be added. If the member does already have the role, then it will be removed.
 - Add role: If the member doesn't already have the role, then it will be added. If the member does already have the role, then this action does nothing.
 - Remove role: If the member already has the role, then it will be removed. If the member doesn't already have the role, then this action does nothing.
+
+### Add Role Temporarily
+
+Check this box if you want Sentry to automatically remove the role from the member after a prescribed time has elapsed.
+Once checked, a box will appear for you to enter the time after which you want Sentry to remove the role.
+
+If the behavior of this action is Toggle and Sentry removes the role because the member already had the role when the
+rule was triggered, then this option has no effect.
 
 ### Respect Role Hierarchy
 

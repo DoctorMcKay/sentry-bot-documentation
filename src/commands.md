@@ -134,7 +134,7 @@ Please note that Discord timeouts are more limited compared to a role-based mute
 - It's not possible to list users that are currently in a timeout
 
 Please note that if you were previously using a muted role and switch to Discord timeouts, existing mutes will still expire
-normally, but it will become impossible to remove them using Sentry's `/mute remove` command. You can still manually remove
+normally, but they will become impossible to remove them using Sentry's `/mute remove` command. You can still manually remove
 the role.
 
 ## Report
