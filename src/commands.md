@@ -2,8 +2,8 @@
 
 [Dashboard: Commands](https://sentrybot.gg/dashboard/commands)
 
-By default, Sentry does not register any application commands in your server. You need to install those commands you want
-to use.
+By default, Sentry does not register any application commands in your server. You need to install those commands you
+want to use.
 
 By default, non-moderation commands can be used by @everyone, and moderation commands cannot be used by anyone. You can
 override permissions for each command individually. For moderation commands, you can choose up to 10 roles to allow
@@ -12,8 +12,8 @@ to the command. Allowing roles on non-moderation commands has no effect unless y
 
 Allowed roles will override denied roles. So, for example, if you deny @everyone access to a public command, then only
 members who have those roles that you allow can use the command. If you deny a role named "Role X" access to a public
-command and allow a "Role Y" role, then those members who have only Role X cannot use the command, but those members
-who have both Role X and Role Y *can* use the command.
+command and allow a "Role Y" role, then those members who have only Role X cannot use the command, but those members who
+have both Role X and Role Y *can* use the command.
 
 ## Info
 
@@ -26,7 +26,8 @@ information is available even if the user has left the server.
 
 If no user is specified, then this command will default to returning information about the user who executed it.
 
-If the `quiet` argument is not set to `True`, then this command will reply publicly in the channel where it was executed.
+If the `quiet` argument is not set to `True`, then this command will reply publicly in the channel where it was
+executed.
 
 ## User Info
 
@@ -47,9 +48,9 @@ Same as [/info](#info). Always replies privately.
 This command has subcommands:
 
 - **/ban add**
-    - Bans a user from the server
+	- Bans a user from the server
 - **/ban remove**
-    - Unbans a user from the server
+	- Unbans a user from the server
 
 This command will reply publicly in the channel where it was executed.
 
@@ -71,14 +72,14 @@ will kick them the first time they send a message, interact with Sentry, or chan
 Sentry becomes available again.
 
 :::warning
-Sentry will not upgrade bans issued by Discord's native ban option to kick-based bans. If you want all issued bans to
-be kick-based, then you should remove the **Ban Members** permission from your moderator roles.
+Sentry will not upgrade bans issued by Discord's native ban option to kick-based bans. If you want all issued
+bans to be kick-based, then you should remove the **Ban Members** permission from your moderator roles.
 :::
 
 :::warning
-Sentry must still have **Ban Members** permission, even if you choose to use kick-based bans. When a kick-based ban is
-issued, Sentry will issue a traditional ban to remove the member from the server, which will then be immediately removed.
-This behavior is required to enable message purging.
+Sentry must still have **Ban Members** permission, even if you choose to use kick-based bans. When a
+kick-based ban is issued, Sentry will issue a traditional ban to remove the member from the server, which will then be
+immediately removed. This behavior is required to enable message purging.
 :::
 
 ### Send DM to Banned Members
@@ -104,7 +105,7 @@ This command has subcommands:
 - **/mute remove**
 	- Unmutes a user who is muted
 - **/mute list**
-    - Lists all currently active mutes and their remaining time (replies privately)
+	- Lists all currently active mutes and their remaining time (replies privately)
 
 ### Muted Role
 
@@ -133,9 +134,9 @@ Please note that Discord timeouts are more limited compared to a role-based mute
 - It's not possible to allow users to access specific channels when in a timeout
 - It's not possible to list users that are currently in a timeout
 
-Please note that if you were previously using a muted role and switch to Discord timeouts, existing mutes will still expire
-normally, but they will become impossible to remove them using Sentry's `/mute remove` command. You can still manually remove
-the role.
+Please note that if you were previously using a muted role and switch to Discord timeouts, existing mutes will still
+expire normally, but they will become impossible to remove them using Sentry's `/mute remove` command. You can still
+manually remove the role.
 
 ## Report
 
@@ -159,8 +160,8 @@ below it that your server moderators can use:
 		- Opens a private thread between the reporter and the moderator who executes this action, enabling moderators to
 		  request additional information from the reporter.
 	- **Ban**
-        - Bans the reportee and marks the report as resolved. Only members who can access Sentry's [/ban](#ban) command
-          can use this action. This action will prompt the member for a ban reason before actually banning the reportee.
+		- Bans the reportee and marks the report as resolved. Only members who can access Sentry's [/ban](#ban) command
+		  can use this action. This action will prompt the member for a ban reason before actually banning the reportee.
 
 ### Report Notification Channel
 
@@ -181,11 +182,28 @@ limitation.
 <RequiredPermissions :channel="['View Channel', 'Send Messages']" />
 
 You can optionally choose a channel that will be notified when a reported user is banned using the Ban report action.
-This option is intended to be set to a public channel, in case you want transparency in your moderation actions. Bans are
-always logged to your [server log channel](./settings.md#logging).
+This option is intended to be set to a public channel, in case you want transparency in your moderation actions. Bans
+are always logged to your [server log channel](./settings.md#logging).
 
-Ban notification messages will include the name of the user who was banned, the name of the moderator who issued the ban,
-and the reason the moderator chose for the ban.
+Ban notification messages will include the name of the user who was banned, the name of the moderator who issued the
+ban, and the reason the moderator chose for the ban.
+
+### Automatically Resolve Reports When A Reportee Is Banned Outside Of The Report System
+
+If a member is reported and subsequently banned using Sentry's /ban command or Discord's built-in ban system, you can
+choose for any outstanding reports to be automatically resolved.
+
+- **Don't automatically resolve**
+    - Do nothing when a member is banned and keep outstanding reports against them open
+- **Resolve silently**
+    - Resolve all open reports against a member when they're banned, but don't notify the reporters
+- **Resolve and notify reporters** (default)
+    - Resolve all open reports against a member when they're banned, and also [notify the reporters](./settings.md#member-notifications)
+    - Reports older than 24 hours will be resolved silently
+
+Reports will always be automatically resolved and notify the reporter when the **Ban** option is selected in the
+**More actions...** menu under a report. Additionally, this feature will also automatically resolve any reports that are
+under 1 hour old regardless of the value of this option.
 
 ### Mod Thread Channel
 
@@ -209,12 +227,12 @@ This command has subcommands:
 - **/role add**
 	- Adds a role to a specified member
 - **/role remove**
-    - Removes a role from a specified member
+	- Removes a role from a specified member
 
 ### Valid Roles
 
-You can optionally choose a list of roles which will be the only roles that can be granted or removed using this command.
-Useful if you want to give some moderators the ability to grant a limited subset of roles.
+You can optionally choose a list of roles which will be the only roles that can be granted or removed using this
+command. Useful if you want to give some moderators the ability to grant a limited subset of roles.
 
 ## Purge
 
@@ -230,22 +248,24 @@ weeks, or older than the previous 500 messages in the channel.
 The only required argument is `limit`. This should be a number from 1-200, and is the maximum number of messages that
 Sentry will purge. If Sentry can't find enough messages to delete, then Sentry will delete as many as it can find.
 
-All other arguments are optional and will restrict which messages Sentry will delete. If you don't provide any additional
-arguments besides `limit`, then Sentry will delete all messages in the channel, newest first, up to your limit.
+All other arguments are optional and will restrict which messages Sentry will delete. If you don't provide any
+additional arguments besides `limit`, then Sentry will delete all messages in the channel, newest first, up to your
+limit.
 
-- contains-substring: Only messages containing the provided substring will be deleted. String matching is case-insensitive, 
-  but punctuation is not ignored as in the Contains Substring automod condition.
+- contains-substring: Only messages containing the provided substring will be deleted. String matching is
+  case-insensitive, but punctuation is not ignored as in the Contains Substring automod condition.
 - user-type: Only messages sent by the specified user type (humans or bots) will be deleted.
 - from-user: Only messages sent by the speciifed user will be deleted.
 - with-mentions: Only messages that contain at least one user, role, or @everyone mention will be deleted. You can also
   choose "without mentions", which will only delete messages that do not contain a mention.
-- with-files: Only messages that contain at least one uploaded file will be deleted. You can also choose "without files",
-  which will only delete messages that do not contain an uploaded file.
+- with-files: Only messages that contain at least one uploaded file will be deleted. You can also choose "without files"
+  , which will only delete messages that do not contain an uploaded file.
 - with-links: Only messages that contain at least one link will be deleted. You can also choose "without links", which
   will only delete messages that have message content but do not contain links.
-- with-embeds: Only messages that contain embedded content (e.g. a Tweet or a linked image) will be deleted. You can also
-  choose "without embeds", which will only delete messages that do not contain embedded content. Uploaded files do not
-  qualify as embedded content.
+- with-embeds: Only messages that contain embedded content (e.g. a Tweet or a linked image) will be deleted. You can
+  also choose "without embeds", which will only delete messages that do not contain embedded content. Uploaded files do
+  not qualify as embedded content.
 
-It is possible to create a series of arguments that are contradictory. For example, `from-user: @Sentry, user-type: humans`
+It is possible to create a series of arguments that are contradictory. For
+example, `from-user: @Sentry, user-type: humans`
 will not match any messages because Sentry is a bot, not a human.
