@@ -45,6 +45,7 @@ you later. This data includes, but is not limited to:
 - The date and time when the report was submitted or marked as resolved
 
 ### Bans
+
 When [/ban](./commands.md#ban) is used (or any other time a user is banned), we store this data, so that we can show it
 to you later:
 
@@ -57,8 +58,18 @@ to you later:
 
 ### Mutes
 
-When [/mute](./commands.md#mute) is used (or any other time a role is applied to a user temporarily), we store this data,
-so that we know when to remove the role later:
+When [/mute](./commands.md#mute) is used, we store this data, so that we can show it to you later and use it for other
+purposes such as automod rules:
+
+- The ID of the user that was muted
+- The ID of the user that performed the mute, or a reference to the automod rule that caused the mute
+- What type of mute it is (role-based or timeout)
+- The reason supplied by the moderator or automod rule
+- The date and time when the mute was issued
+- The date and time when the mute expires
+- The date and time when the mute was removed, after it is removed or expired
+
+Also, any time a role is applied to a member temporarily, we store this data, so that we know when to remove the role later:
 
 - The ID of the user to whom the role was applied
 - The ID of the role that was applied
@@ -78,6 +89,7 @@ We collect and store some data about every server Sentry is a member of.
   server (but not messages)
 - The list of Discord [features](https://discord.com/developers/docs/resources/guild#guild-object-guild-features) that
   are enabled on your server
+- The ID of the user who created the server
 - The ID of the user who added Sentry to the server
 
 ## Data About Server Members
@@ -92,6 +104,11 @@ and store this data about every member of your server:
 - A count of how many times the member has joined your server
 - The date and time of when the member first joined your server, when they last joined your server, and when they last
   left your server
+
+## Data About Discord Users
+
+We save a copy of the public profile information for every user that Sentry encounters so that user IDs can be resolved
+into username and avatars in places like the dashboard's [member search](./membersearch.md).
 
 ## Stripe
 
