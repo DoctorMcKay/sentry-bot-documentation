@@ -1,6 +1,6 @@
 # Premium
 
-[Get Premium](https://sentrybot.gg/dashboard/premium)
+[Get Premium](https://sentrybot.gg/guilds/_/premium)
 
 Most of Sentry's features are available for free, but some special features require a Premium subscription. Premium
 currently costs $6/month for the first server, and $4/month for every additional server after your first.
@@ -18,7 +18,7 @@ upgrade to Premium.
 ## Premium Credits
 
 If you want to upgrade a server to Premium, you will need to buy a Premium Credit. If you don't yet have any premium
-credits, you can get your first one by clicking the **Get Premium** button on the [Premium](https://sentrybot.gg/dashboard/premium)
+credits, you can get your first one by clicking the **Get Premium** button on the [Premium](https://sentrybot.gg/guilds/_/premium)
 page in the Sentry Bot Dashboard.
 
 If you already have one or more premium credits, you can add more or cancel some or all of your premium credits by clicking

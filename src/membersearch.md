@@ -1,6 +1,6 @@
 # Member Search
 
-[Dashboard: Member Search](https://sentrybot.gg/dashboard/membersearch)
+[Dashboard: Member Search](https://sentrybot.gg/guilds/_/membersearch)
 
 Member Search is a tool designed for helping moderators of public Discord servers to identify and deal with raids. It
 enables you to search for members who joined your server in a specific time period and mass-kick or mass-ban the bad actors.

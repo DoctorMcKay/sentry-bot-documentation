@@ -5,7 +5,7 @@ These features are not listed in any particular order.
 
 ## Dashboard Automod Configuration
 
-[**Automod is now configurable from the dashboard!**](https://sentrybot.gg/dashboard/automod)
+[**Automod is now configurable from the dashboard!**](https://sentrybot.gg/guilds/_/automod)
 
 Sentry already has the ability to add interaction components (i.e. buttons and select menus) to its own messages which,
 when selected, will evaluate automod rules. It's not yet possible to configure this feature from the dashboard, but this

@@ -1,6 +1,6 @@
 # Settings
 
-[Dashboard: Settings](https://sentrybot.gg/dashboard/settings)
+[Dashboard: Settings](https://sentrybot.gg/guilds/_/settings)
 
 ## Logging
 

@@ -1,6 +1,6 @@
 # Utilities
 
-[Dashboard: Utilities](https://sentrybot.gg/dashboard/utilities)
+[Dashboard: Utilities](https://sentrybot.gg/guilds/_/utilities)
 
 ## Post Message
 

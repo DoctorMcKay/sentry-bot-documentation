@@ -1,6 +1,6 @@
 # Commands
 
-[Dashboard: Commands](https://sentrybot.gg/dashboard/commands)
+[Dashboard: Commands](https://sentrybot.gg/guilds/_/commands)
 
 By default, Sentry does not register any application commands in your server. You need to install those commands you
 want to use.
