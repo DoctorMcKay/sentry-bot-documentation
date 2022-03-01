@@ -71,6 +71,7 @@ module.exports = {
 					collapsable: false,
 					children: [
 						'automod/',
+						'automod/components',
 						'automod/conditions',
 						'automod/actions',
 						'automod/examples'
