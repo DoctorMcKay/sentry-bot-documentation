@@ -1,6 +1,6 @@
-# Overview
+# Message Rules
 
-[Dashboard: Automod](https://sentrybot.gg/guilds/_/automod)
+[Dashboard: Automod Message Rules](https://sentrybot.gg/guilds/_/automod/rules/message)
 
 Sentry's automod feature is very powerful. It allows you to create your own custom rules to evaluate against messages
 that are sent in your server.

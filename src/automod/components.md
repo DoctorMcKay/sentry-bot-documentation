@@ -18,6 +18,25 @@ Sentry post a message containing the components you need to make those rules wor
 
 **At the moment, only button components are available.** Select menu components will be available soon.
 
+## Enabled Rules
+
+Only rules that are enabled will be evaluated. If a rule is disabled and a component tied to that rule is interacted with,
+the member who interacted with the component will get back an error message informing them that the action they invoked
+is not configured properly, and that they should contact the server's moderators.
+
+## Limits
+
+Each server is limited to 10 automod component rules. This limit can be increased to 100 by upgrading your server to
+[Premium](../premium.md). Once you reach your limit, no more rules can be created.
+
+If you subscribe to Premium, create more than 10 rules, and then cancel Premium, these things happen:
+
+- All enabled rules continue to be processed when linked components are interacted with, even if you have more than 10
+- You won't be able to create any new rules until you delete enough rules such that you have fewer than 10 (enabled or disabled)
+- All rules can be edited without restriction
+- All rules can be disabled without restriction
+- You won't be able to enable any rules that are disabled if enabling that rule would bring your total number of enabled rules over 10
+
 ## Example
 
 This example will allow members to add or remove the "Self-Selected Role" role.
