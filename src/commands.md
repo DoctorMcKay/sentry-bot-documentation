@@ -142,31 +142,38 @@ manually remove the role.
 
 **This is a public command.**
 
-**This command is available as both a slash command and a message command.** The slash command variant
-is executed by typing /report in the chat box. The message command variant is executed by selecting "Report" from the "Apps"
-menu when right-clicking or selecting [...] on a chat message. Both variants share the same configuration options; the
-options are duplicated between the two cards in the Sentry dashboard in case you want to use one version of the command
-and not the other. Please note that due to Discord limitations, user and message commands are not yet available on mobile
-and attachments cannot be collected via message commands.
+**This command is available as both a slash command and a message command.** The slash command variant is executed by
+typing /report in the chat box. The message command variant is executed by selecting "Report" from the "Apps" menu when
+right-clicking or selecting [...] on a chat message. Both variants share the same configuration options; the options are
+duplicated between the two cards in the Sentry dashboard in case you want to use one version of the command and not the
+other. Please note that due to Discord limitations, user and message commands are not yet available on mobile and
+attachments cannot be collected via message commands.
+
+When the Report message command is invoked, a modal dialog will pop up prompting the user to enter a reason for their
+report.
 
 Allows server members to report other members to server staff for breaking the rules. Each report has a few controls
 below it that your server moderators can use:
 
 - **Mark Resolved**
-	- Marks the report as resolved and sends a [notification](./settings.md#member-notifications) to the reporter that
-	  the report was marked as resolved.
+    - Marks the report as resolved and sends a [notification](./settings.md#member-notifications) to the reporter that
+      the report was marked as resolved.
 - **Resolve Silently**
-	- Marks the report as resolved without sending a notification to the reporter.
+    - Marks the report as resolved without sending a notification to the reporter.
 - **Get ID**
-	- On mobile, it can be difficult to copy the reportee's user ID. This action replies privately with the reportee's
-	  user ID for easy copying.
+    - On mobile, it can be difficult to copy the reportee's user ID. This action replies privately with the reportee's
+      user ID for easy copying.
 - **More actions...**
-	- [**Open thread**](#mod-thread-channel)
-		- Opens a private thread between the reporter and the moderator who executes this action, enabling moderators to
-		  request additional information from the reporter.
-	- **Ban**
-		- Bans the reportee and marks the report as resolved. Only members who can access Sentry's [/ban](#ban) command
-		  can use this action. This action will prompt the member for a ban reason before actually banning the reportee.
+    - [**Open thread**](#mod-thread-channel)
+        - Opens a private thread between the reporter and the moderator who executes this action, enabling moderators to
+          request additional information from the reporter.
+    - **Ban**
+        - Bans the reportee and marks the report as resolved. Only members who can access Sentry's [/ban](#ban) command
+          can use this action. This action will prompt the member for a ban reason before actually banning the reportee.
+
+:::warning
+Some features may not work properly if Sentry lacks access to view the channel in which a report was sent.
+:::
 
 ### Report Notification Channel
 
@@ -175,6 +182,9 @@ below it that your server moderators can use:
 This option must be set. This is the channel where report notifications will be delivered. It is **very important** that
 only your server moderators can access this channel. Anyone who has permission to view the channel will be able to act
 on reports!
+
+Report notifications include a "Jump to context" link which jumps to the last message sent in the channel at the time
+the /report command was used, or jumps to the specific message that was reported if the Report message command was used.
 
 ### Mention Role When Report Is Received
 
