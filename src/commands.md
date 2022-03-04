@@ -142,7 +142,12 @@ manually remove the role.
 
 **This is a public command.**
 
-**This is a slash command. It is executed by typing /report in the chat box.**
+**This command is available as both a slash command and a message command.** The slash command variant
+is executed by typing /report in the chat box. The message command variant is executed by selecting "Report" from the "Apps"
+menu when right-clicking or selecting [...] on a chat message. Both variants share the same configuration options; the
+options are duplicated between the two cards in the Sentry dashboard in case you want to use one version of the command
+and not the other. Please note that due to Discord limitations, user and message commands are not yet available on mobile
+and attachments cannot be collected via message commands.
 
 Allows server members to report other members to server staff for breaking the rules. Each report has a few controls
 below it that your server moderators can use:
