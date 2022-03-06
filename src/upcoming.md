@@ -5,13 +5,16 @@ These features are not listed in any particular order.
 
 ## Dashboard Automod Configuration
 
-[**Automod is now configurable from the dashboard!**](https://sentrybot.gg/guilds/_/automod)
+[**Automod message rules are now configurable from the dashboard!**](./automod/index.md)
 
-Sentry already has the ability to add interaction components (i.e. buttons and select menus) to its own messages which,
-when selected, will evaluate automod rules. It's not yet possible to configure this feature from the dashboard, but this
-is planned for the near future.
+[**Automod component rules are now configurable from the dashboard!**](./automod/components.md)
 
-This feature can be used to create role selectors and many other possibilities.
+You can have Sentry send messages that include buttons which can trigger automod rules that you configure. This means
+that you can use Sentry's powerful automod system to create interactivity with members of your server. For example, you
+can create a button that, when clicked, opens a private thread with the moderators so that users can communicate privately
+with the moderation team.
+
+Select menus will be available soon.
 
 ## New Automod Features
 

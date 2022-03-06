@@ -2,6 +2,8 @@
 
 [Dashboard: Automod Component Rules](https://sentrybot.gg/guilds/_/automod/component)
 
+[Need some ideas for how to use component rules?](#examples)
+
 Sentry's powerful rules-based automod can also be used when members click buttons or select entries in menus attached to
 messages sent by Sentry. This could be used to create a UI for members to pick up roles, or any number of other things.
 This way of doing things is much more powerful than a traditional bot's reaction-roles feature, since you can do anything
@@ -37,7 +39,12 @@ If you subscribe to Premium, create more than 10 rules, and then cancel Premium,
 - All rules can be disabled without restriction
 - You won't be able to enable any rules that are disabled if enabling that rule would bring your total number of enabled rules over 10
 
-## Example
+## Examples
+
+- Create a thread-based ticket system with a button that triggers a [Start Thread](./actions.md#start-thread) action
+- Toggle roles on users with a [Toggle Role](./actions.md#toggle-role) action
+
+## Example Screenshots
 
 This example will allow members to add or remove the "Self-Selected Role" role.
 
