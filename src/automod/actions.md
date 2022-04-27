@@ -135,8 +135,9 @@ A thread is reused if all of these conditions are true:
 - The old thread is in the same channel as the channel the new thread would be created in
 - The old thread was created in response to an automod action triggered by the same user who triggered the current action
 - The old thread's privacy state is the same as the new thread
+- The old thread was created by an automod action that had the reuse option enabled
 
-If all three conditions are met, then instead of creating a new thread, Sentry will unarchive the old thread (if it's
+If all four conditions are met, then instead of creating a new thread, Sentry will unarchive the old thread (if it's
 archived) and will proceed with the old thread. If an old thread is reused, then its settings are kept, and these settings
 are ignored for this action:
 
