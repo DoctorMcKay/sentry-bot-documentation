@@ -127,6 +127,28 @@ If you want to add all members with a given role to the thread automatically, ch
 have at least one of the selected roles will be added. Sentry accomplishes this by sending a message in the thread with
 a role mention for each configured role, which is immediately deleted.
 
+### Reuse An Old Automod-Created Thread Created For The Same User In The Same Channel
+
+If checked, when this action is triggered Sentry will attempt to reuse an old thread that it previously created via automod.
+A thread is reused if all of these conditions are true:
+
+- The old thread is in the same channel as the channel the new thread would be created in
+- The old thread was created in response to an automod action triggered by the same user who triggered the current action
+- The old thread's privacy state is the same as the new thread
+
+If all three conditions are met, then instead of creating a new thread, Sentry will unarchive the old thread (if it's
+archived) and will proceed with the old thread. If an old thread is reused, then its settings are kept, and these settings
+are ignored for this action:
+
+- Thread Name
+- Thread Auto Archive After
+- Non-Moderators Can Add Other Non-Moderators To This Thread
+
+All other normal Start Thread procedure is followed, including adding the user to the thread if they previously left it,
+adding roles via **Add Roles To Thread**, and sending a message (even if that message is identical) to the one preivously
+sent in this thread. Sentry will also remove itself from the thread if **Sentry Should Send a Message In The Thread**
+is enabled.
+
 ### Private Thread
 
 <BoostFeatureRequired feature="private threads" level="2" />
