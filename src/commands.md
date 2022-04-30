@@ -2,18 +2,14 @@
 
 [Dashboard: Commands](https://sentrybot.gg/guilds/_/commands)
 
-By default, Sentry does not register any application commands in your server. You need to install those commands you
-want to use.
+By default, non-moderation commands can be used by @everyone, and moderation commands cannot be used by anyone except
+those with the **Administrator** permission and the server owner. You can configure the permissions for any command by
+opening your Discord client, going to **Server Settings**, selecting the **Integrations** tab, and then clicking on
+**Sentry Bot**. In order to manage command permissions, you need to have both **Manage Server** and **Manage Roles**
+permissions, and you will only be able to manage permissions for commands that you yourself can access.
 
-By default, non-moderation commands can be used by @everyone, and moderation commands cannot be used by anyone. You can
-override permissions for each command individually. For moderation commands, you can choose up to 10 roles to allow
-access to the command. For non-moderation commands, you can choose up to 10 roles to allow and 10 roles to deny access
-to the command. Allowing roles on non-moderation commands has no effect unless you also deny some roles.
-
-Allowed roles will override denied roles. So, for example, if you deny @everyone access to a public command, then only
-members who have those roles that you allow can use the command. If you deny a role named "Role X" access to a public
-command and allow a "Role Y" role, then those members who have only Role X cannot use the command, but those members who
-have both Role X and Role Y *can* use the command.
+Moderation commands are denied permission to @everyone by default, and they will disable themselves if they are configured
+to allow @everyone. This is a security feature to protect you against accidental misconfiguration.
 
 ## Info
 
