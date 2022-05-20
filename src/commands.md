@@ -28,10 +28,10 @@ If no user is specified, then this command will default to returning information
 
 By default, this command will reply publicly.
 
-### Banned Members
+### Banned Users
 
 By default, the info output for a user will show "⛔ Banned from this server" if the user in question is banned from your
-server. To prevent this from being shown, change the "Banned members" option to "Do not show if a user is banned".
+server. To prevent this from being shown, change the "Banned users" option to "Do not show if a user is banned".
 
 ## User Info
 
