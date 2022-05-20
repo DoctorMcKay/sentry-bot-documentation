@@ -11,7 +11,7 @@ permissions, and you will only be able to manage permissions for commands that y
 Moderation commands are denied permission to @everyone by default, and they will disable themselves if they are configured
 to allow @everyone. This is a security feature to protect you against accidental misconfiguration.
 
-All slash commands (except `/report`) have an option named `response-type`. This option controls whether Sentry responds
+All slash commands (except **/report**) have an option named `response-type`. This option controls whether Sentry responds
 to the command publicly in the channel where the command was invoked, or privately directly to the invoker using an
 [ephemeral message](https://support.discord.com/hc/en-us/articles/1500000580222-Ephemeral-Messages-FAQ).
 
@@ -111,7 +111,7 @@ This command has subcommands:
 - **/mute list**
     - Lists all currently active mutes and their remaining time
 
-By default, `/mute add` and `/mute remove` will reply publicly, and `/mute list` will reply privately.
+By default, **/mute add** and **/mute remove** will reply publicly, and **/mute list** will reply privately.
 
 ### Muted Role
 
@@ -141,7 +141,7 @@ Please note that Discord timeouts are more limited compared to a role-based mute
 - It's not possible to list users that are currently in a timeout
 
 Please note that if you were previously using a muted role and switch to Discord timeouts, existing mutes will still
-expire normally, but they will become impossible to remove them using Sentry's `/mute remove` command. You can still
+expire normally, but they will become impossible to remove them using Sentry's **/mute remove** command. You can still
 manually remove the role.
 
 ## Report
