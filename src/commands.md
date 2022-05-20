@@ -11,6 +11,10 @@ permissions, and you will only be able to manage permissions for commands that y
 Moderation commands are denied permission to @everyone by default, and they will disable themselves if they are configured
 to allow @everyone. This is a security feature to protect you against accidental misconfiguration.
 
+All slash commands (except `/report`) have an option named `response-type`. This option controls whether Sentry responds
+to the command publicly in the channel where the command was invoked, or privately directly to the invoker using an
+[ephemeral message](https://support.discord.com/hc/en-us/articles/1500000580222-Ephemeral-Messages-FAQ).
+
 ## Info
 
 **This is a public command.**
@@ -22,8 +26,7 @@ information is available even if the user has left the server.
 
 If no user is specified, then this command will default to returning information about the user who executed it.
 
-If the `quiet` argument is not set to `True`, then this command will reply publicly in the channel where it was
-executed.
+By default, this command will reply publicly.
 
 ## User Info
 
@@ -48,7 +51,7 @@ This command has subcommands:
 - **/ban remove**
 	- Unbans a user from the server
 
-This command will reply publicly in the channel where it was executed.
+By default, this command will reply publicly.
 
 ### Ban Mode
 
@@ -97,11 +100,13 @@ joins.
 This command has subcommands:
 
 - **/mute add**
-	- Mutes a user for a [period of time](./index.md#time-periods)
+    - Mutes a user for a [period of time](./index.md#time-periods)
 - **/mute remove**
-	- Unmutes a user who is muted
+    - Unmutes a user who is muted
 - **/mute list**
-	- Lists all currently active mutes and their remaining time (replies privately)
+    - Lists all currently active mutes and their remaining time
+
+By default, `/mute add` and `/mute remove` will reply publicly, and `/mute list` will reply privately.
 
 ### Muted Role
 
@@ -140,10 +145,7 @@ manually remove the role.
 
 **This command is available as both a slash command and a message command.** The slash command variant is executed by
 typing /report in the chat box. The message command variant is executed by selecting "Report" from the "Apps" menu when
-right-clicking or selecting [...] on a chat message. Both variants share the same configuration options; the options are
-duplicated between the two cards in the Sentry dashboard in case you want to use one version of the command and not the
-other. Please note that due to Discord limitations, user and message commands are not yet available on mobile and
-attachments cannot be collected via message commands.
+right-clicking or selecting [...] on a chat message.
 
 When the Report message command is invoked, a modal dialog will pop up prompting the user to enter a reason for their
 report.
@@ -236,9 +238,11 @@ If configured, enables the **Open thread** action in the More Actions menu. Thre
 This command has subcommands:
 
 - **/role add**
-	- Adds a role to a specified member
+    - Adds a role to a specified member
 - **/role remove**
-	- Removes a role from a specified member
+    - Removes a role from a specified member
+
+By default, this command will reply publicly.
 
 ### Valid Roles
 
@@ -266,7 +270,7 @@ limit.
 - contains-substring: Only messages containing the provided substring will be deleted. String matching is
   case-insensitive, but punctuation is not ignored as in the Contains Substring automod condition.
 - user-type: Only messages sent by the specified user type (humans or bots) will be deleted.
-- from-user: Only messages sent by the speciifed user will be deleted.
+- from-user: Only messages sent by the specified user will be deleted.
 - with-mentions: Only messages that contain at least one user, role, or @everyone mention will be deleted. You can also
   choose "without mentions", which will only delete messages that do not contain a mention.
 - with-files: Only messages that contain at least one uploaded file will be deleted. You can also choose "without files"
@@ -277,6 +281,7 @@ limit.
   also choose "without embeds", which will only delete messages that do not contain embedded content. Uploaded files do
   not qualify as embedded content.
 
-It is possible to create a series of arguments that are contradictory. For
-example, `from-user: @Sentry, user-type: humans`
-will not match any messages because Sentry is a bot, not a human.
+It is possible to create a series of arguments that are contradictory. For example,
+`from-user: @Sentry, user-type: humans` will not match any messages because Sentry is a bot, not a human.
+
+By default, this command will reply publicly.
