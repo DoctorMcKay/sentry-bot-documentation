@@ -171,8 +171,9 @@ below it that your server moderators can use:
         - Opens a private thread between the reporter and the moderator who executes this action, enabling moderators to
           request additional information from the reporter.
     - **Ban**
-        - Bans the reportee and marks the report as resolved. Only members who can access Sentry's [/ban](#ban) command
-          can use this action. This action will prompt the member for a ban reason before actually banning the reportee.
+        - Bans the reportee and marks the report as resolved. Only members who have the **Ban Members** permissions or
+          who can access Sentry's [/ban](#ban) command can use this action. This action will prompt the member for a ban
+          reason before actually banning the reportee.
 
 :::warning
 Some features may not work properly if Sentry lacks access to view the channel in which a report was sent.
