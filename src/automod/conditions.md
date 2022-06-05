@@ -44,6 +44,15 @@ embeds.
 This condition passes if the message it's testing contains at least one of the configured substrings. You must configure
 at least one substring to search for.
 
+#### Custom Emojis and Stickers
+
+When Sentry is checking message content, it treats custom emojis as if they were literally text with the format
+`<:emoji_name:emoji_id>` (e.g. `<:sentry:893724781197807616>`). Stickers are treated as if they were text with the format
+`<sticker:sticker_name:sticker_id>` (e.g. `<sticker:Sentry:902382424250519582>`). If you want to check if a specific
+emoji or sticker was sent, then you'll need to use these formats.
+
+If you simply want to check if an emoji named "test" was sent, then you can enter ":test:" and it will match your rule.
+
 ### Case Sensitive
 
 Check this box if you want substring searching to be case-sensitive (i.e. the matched string in the message must match
@@ -64,6 +73,9 @@ option, then the `@` character will be ignored and this condition will pass agai
 
 This condition passes if the message it's testing exactly equals one of the configured strings (excluding leading or
 trailing whitespace).
+
+To see how custom emojis and stickers are treated, check [Custom Emojis and Stickers](#custom-emojis-and-stickers)
+under [Contains Substring](#contains-substring).
 
 ### Case Sensitive
 
