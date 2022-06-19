@@ -112,6 +112,11 @@ Choose a name for the thread. You can use [placeholder tokens](#message-placehol
 
 <RequiredPermissions :channel="['Create Public Threads', 'Create Private Threads', 'Send Messages In Threads', 'Manage Threads']" />
 
+:::warning
+If you leave this blank and the trigger message is sent in a non-text channel (e.g. a thread or a voice channel's text
+chat), then this action will fail.
+:::
+
 Choose a channel that should contain the new thread. If left blank, Sentry will use the channel where the original message
 was sent.
 
