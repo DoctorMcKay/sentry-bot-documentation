@@ -62,6 +62,13 @@ Check this box if you want Sentry to reply to the interacting member using an
 [ephemeral message](https://support.discord.com/hc/en-us/articles/1500000580222-Ephemeral-Messages-FAQ).
 This option is only available for automod component rules.
 
+## Report
+
+Reports the message that triggered this rule into your configured [report channel](../commands.md#report).
+
+If you have configured your reports to notify a role, the notification will include the name of the automod rule that
+was triggered.
+
 ## Send Message
 
 Publicly sends a customizable message in any channel of your choice.
