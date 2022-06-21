@@ -70,6 +70,14 @@ Reports the message that triggered this rule into your configured
 If you have configured your reports to [mention a role](../commands.md#mention-role-when-report-is-received), the
 mention notification will include the name of the automod rule that was triggered.
 
+### Report Notification Channel
+
+For convenience, you can configure your server's report notification channel directly from the automod rule editor, but
+please note that this channel selector affects all reports submitted in your server. That is, **changing the channel in
+the automod rule editor will also change the [channel configured for the /report command](../commands.md#report-notification-channel)**.
+In other words, this channel selector is a clone of the /report command's channel selector, and updates the same setting.
+It is not possible to configure a separate report notification channel for automod rules.
+
 ## Send Message
 
 Publicly sends a customizable message in any channel of your choice.
