@@ -64,10 +64,11 @@ This option is only available for automod component rules.
 
 ## Report
 
-Reports the message that triggered this rule into your configured [report channel](../commands.md#report).
+Reports the message that triggered this rule into your configured
+[report notification channel](../commands.md#report-notification-channel).
 
-If you have configured your reports to notify a role, the notification will include the name of the automod rule that
-was triggered.
+If you have configured your reports to [mention a role](../commands.md#mention-role-when-report-is-received), the
+mention notification will include the name of the automod rule that was triggered.
 
 ## Send Message
 
