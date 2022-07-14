@@ -8,6 +8,9 @@ that are sent in your server.
 Each automod rule consists of one or more [conditions](./conditions.md) and one or more [actions](./actions.md) to be
 taken if all of the conditions are met.
 
+Messages sent by Sentry or by a webhook are never tested by Automod. Messages sent by other bots besides Sentry are tested
+unless you exempt them using a [Member Has Role](./conditions.md#member-has-role) condition.
+
 ## Enabled Rules
 
 Only rules that are enabled will be checked. If a rule is disabled, then messages will not be checked against that rule
