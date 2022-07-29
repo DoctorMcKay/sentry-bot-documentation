@@ -38,6 +38,14 @@ Optionally, you can provide a reason for the mute. This reason will be displayed
 Check this box if you want to prevent Sentry from [notifying](../settings.md#member-notifications) the member that they
 have been muted.
 
+## React
+
+Adds an emoji reaction to the message that triggered this rule.
+
+### Emoji
+
+Select an emoji for the reaction. This may be either a Unicode emoji or a custom emoji from your server.
+
 ## Reply Privately
 
 Privately sends a customizable message to the member who sent the message that triggered this rule. This message will
