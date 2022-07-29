@@ -40,6 +40,8 @@ have been muted.
 
 ## React
 
+<RequiredPermissions :channel="['View Channel', 'Add Reactions', 'Read Message History']" />
+
 Adds an emoji reaction to the message that triggered this rule.
 
 ### Emoji
