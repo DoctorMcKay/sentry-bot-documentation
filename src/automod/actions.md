@@ -148,9 +148,7 @@ was sent.
 
 ### Thread Auto Archive After
 
-Choose a time after which the thread should automatically be archived if no message is sent in it. Some options require
-an appropriate server boost level. If the chosen option is not available, then Sentry will automatically choose the longest
-available option.
+Choose a time after which the thread should automatically be archived if no message is sent in it.
 
 ### Add Roles To Thread
 
@@ -183,10 +181,7 @@ is enabled.
 
 ### Private Thread
 
-<BoostFeatureRequired feature="private threads" level="2" />
-
-Check this box if you want the created thread to be private. If private threads are not available in the server, then
-this action will do nothing and will log its failure to your server's [log channel](../settings.md#logging).
+Check this box if you want the created thread to be private.
 
 ### Non-Moderators Can Add Other Non-Moderators To This Thread
 

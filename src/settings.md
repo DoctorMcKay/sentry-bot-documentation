@@ -64,7 +64,6 @@ This setting is off by default.
 ## Member Notifications
 
 <PremiumFeature />
-<BoostFeatureRequired feature="private threads" level="2" />
 
 Sentry occasionally needs to directly notify your server members of various events. For example, Sentry notifies members
 when their reports are marked resolved or when they are muted or unmuted.

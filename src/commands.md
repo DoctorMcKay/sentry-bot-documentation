@@ -227,7 +227,6 @@ under 1 hour old regardless of the value of this option.
 ### Mod Thread Channel
 
 <PremiumFeature />
-<BoostFeatureRequired feature="private threads" level="2" />
 <RequiredPermissions :channel="['View Channel', 'Create Private Threads', 'Send Messages in Threads', 'Embed Links']" />
 <RequiredPermissions :channel="['Send Messages in Threads']" role-is-everyone suffix="Sentry is unable to add members to private threads if they cannot view the parent channel." />
 

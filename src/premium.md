@@ -57,13 +57,9 @@ credit, and are in the Sentry Bot Support server.
 
 ### Private thread member notifications
 
-<BoostFeatureRequired feature="private threads" level="2" />
-
 Premium servers can choose to have Sentry send notifications to their members using [private threads](./settings.md#member-notifications).
 
 ### Report threads
-
-<BoostFeatureRequired feature="private threads" level="2" />
 
 Premium servers have the ability to directly open [private threads](./commands.md#mod-thread-channel) with reporters in
 order to request additional context or evidence for a report.
